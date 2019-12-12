@@ -1,17 +1,17 @@
 ﻿program god;
-var a: integer;
+var a:integer;
+    
 
 begin
-  write('Введите число ');
+  write('Введите год:  ');
  read(a);
- if (a mod 4 <>0) or (a mod 100=0) and (a mod 400<>0) then
- 
- writeln('обычный год ')
- else write('високосный год ');
-writeln(a);
+ if (a mod 400=0) or ((a mod 100<>0)
+ and (a mod 4=0))
+ then writeln('високосный год ')
+ else writeln('невисокосный год ');
  
 
 end.
 
 
-//високосный год или нет//
+//високосный год//
