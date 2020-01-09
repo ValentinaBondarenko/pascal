@@ -15,7 +15,7 @@ Write('Введите знаменатель d2 = ');
 Readln(d);
 S:=(a*d+b*c)/(b*d);
 Writeln;
-write('Сумма дробей s = ', s:0:3);
+writeln('Сумма дробей s = ', (a*d+b*c),' /',(b*d));
 readln;
 end.
 
