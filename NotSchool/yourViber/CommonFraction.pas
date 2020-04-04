@@ -1,29 +1,33 @@
 ﻿Program CommonFraction;
 var
-  a, b, c, d: integer;
+  fractionOneNumerator : integer;
+  fractionOneDenominator : integer;
+  fractionTwoNumerator : integer;
+  fractionTwoDenominator: integer;
+  
   fractionOperator : string;
   s: real;
 Begin
   // Data input
-  Write('Please enter numerator a1 = ');
-  Readln(a);
+  Write('Please enter the first fraction numerator = ');
+  Readln(fractionOneNumerator);
   
-  Write('Please enter denominator b1 = ');
-  Readln(b);
+  Write('Please enter the first fraction denominator = ');
+  Readln(fractionOneDenominator);
   
-  Write('Please enter numerator c2 = ');
-  Readln(c);
+  Write('Please enter the second fraction numerator = ');
+  Readln(fractionTwoNumerator);
   
-  Write('Please enter denominator d2 = ');
-  Readln(d);
+  Write('Please enter the second fraction denominator = ');
+  Readln(fractionTwoDenominator);
   
   Write('Please enter operator (+,-,*,/)');
   Readln(fractionOperator);
   
   // Calculation
-  S:=(a*d+b*c)/(b*d);
+  S:=(fractionOneNumerator*fractionTwoDenominator+fractionOneDenominator*fractionTwoNumerator)/(fractionOneDenominator*fractionTwoDenominator);
   
   // Output
   Writeln;
-  writeln('Sum of fractions s = ', (a*d+b*c),'/',(b*d));
+  writeln('Sum of fractions s = ', (fractionOneNumerator*fractionTwoDenominator+fractionOneDenominator*fractionTwoNumerator),'/',(fractionOneDenominator*fractionTwoDenominator));
 end.
