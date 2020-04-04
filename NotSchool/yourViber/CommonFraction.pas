@@ -25,5 +25,15 @@ Begin
   
   // Calculation and immediate output
   Writeln;
-  writeln('Sum of fractions s = ', (fractionOneNumerator*fractionTwoDenominator+fractionOneDenominator*fractionTwoNumerator),'/',(fractionOneDenominator*fractionTwoDenominator));
+  
+  If fractionOperator = '+' then
+    writeln('Sum of fractions s = ', (fractionOneNumerator*fractionTwoDenominator+fractionOneDenominator*fractionTwoNumerator),'/',(fractionOneDenominator*fractionTwoDenominator))
+  else 
+    if fractionOperator = '-' then
+      writeln('Sum of fractions s = ', (fractionOneNumerator*fractionTwoDenominator-fractionOneDenominator*fractionTwoNumerator),'/',(fractionOneDenominator*fractionTwoDenominator))
+    else
+      if fractionOperator = '*'  then
+        writeln ('Sum of fractions s = ', (fractionOneNumerator*fractionTwoNumerator),'/',(fractionOneDenominator*fractionTwoDenominator))
+      else
+        writeln ('Sum of fractions s = ', (fractionOneNumerator*fractionTwoDenominator),'/',(fractionOneDenominator*fractionTwoDenominator))
 end.
