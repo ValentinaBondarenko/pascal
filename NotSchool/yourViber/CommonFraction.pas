@@ -5,6 +5,10 @@ var
   twoNumerator : integer;
   twoDenominator: integer;
   
+  resultNumerator : integer;
+  resultDenominator : integer;
+  resultString : string;
+  
   fractionOperator : string; // 'operator' is the reserved word
 Begin
   // Data input
@@ -23,17 +27,44 @@ Begin
   Write('Please enter operator (+,-,*,/)');
   Readln(fractionOperator);
   
-  // Calculation and immediate output
-  Writeln;
-  
+  // Calculation
+    
   If fractionOperator = '+' then
-    writeln('Sum of fractions s = ', (oneNumerator*twoDenominator+oneDenominator*twoNumerator),'/',(oneDenominator*twoDenominator))
+    begin
+      resultNumerator := oneNumerator*twoDenominator+oneDenominator*twoNumerator;
+      resultDenominator := oneDenominator*twoDenominator;
+      resultString := 'Sum';
+    end
   else 
     if fractionOperator = '-' then
-      writeln('Sum of fractions s = ', (oneNumerator*twoDenominator-oneDenominator*twoNumerator),'/',(oneDenominator*twoDenominator))
+      begin
+        resultNumerator := oneNumerator*twoDenominator-oneDenominator*twoNumerator;
+        resultDenominator := oneDenominator*twoDenominator;
+        resultString := '-';
+      end      
     else
-      if fractionOperator = '*'  then
-        writeln ('Sum of fractions s = ', (oneNumerator*twoNumerator),'/',(oneDenominator*twoDenominator))
+      if fractionOperator = '*' then 
+        begin
+          resultNumerator := oneNumerator*twoNumerator;
+          resultDenominator := oneDenominator*twoDenominator;
+          resultString := 'Multiplication';  
+        end
       else
-        writeln ('Sum of fractions s = ', (oneNumerator*twoDenominator),'/',(oneDenominator*twoDenominator))
+        begin
+          resultNumerator := oneNumerator*twoDenominator;
+          resultDenominator := oneDenominator*twoDenominator;
+          resultString := 'Division'; 
+        end;
+      
+  
+  // Socraschenie
+     
+     
+  // Determinging of the whole (celyi) part   
+      
+  //output
+  Writeln;
+  
+  resultString := resultString +  ' of fractions = ' + resultNumerator + '/' + resultDenominator;
+  
 end.
