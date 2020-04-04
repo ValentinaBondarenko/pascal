@@ -5,19 +5,19 @@ var
   s: real;
 Begin
   // Data input
-  Write('Введите числитель a1 = ');
+  Write('Please enter numerator a1 = ');
   Readln(a);
   
-  Write('Введите знаменатель b1 = ');
+  Write('Please enter denominator b1 = ');
   Readln(b);
   
-  Write('Введите числитель с2 = ');
+  Write('Please enter numerator c2 = ');
   Readln(c);
   
-  Write('Введите знаменатель d2 = ');
+  Write('Please enter denominator d2 = ');
   Readln(d);
   
-  Write('Введите оператор (+,-,*,/)');
+  Write('Please enter operator (+,-,*,/)');
   Readln(fractionOperator);
   
   // Calculation
@@ -25,5 +25,5 @@ Begin
   
   // Output
   Writeln;
-  writeln('Сумма дробей s = ', (a*d+b*c),'/',(b*d));
+  writeln('Sum of fractions s = ', (a*d+b*c),'/',(b*d));
 end.
