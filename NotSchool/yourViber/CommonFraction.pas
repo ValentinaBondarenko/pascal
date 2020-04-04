@@ -1,5 +1,4 @@
 ﻿Program CommonFraction;
-uses crt;
 var
 a, b, c, d: integer;
 s: real;
