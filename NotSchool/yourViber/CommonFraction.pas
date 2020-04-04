@@ -1,24 +1,24 @@
 ﻿Program CommonFraction;
 var
-  fractionOneNumerator : integer;
-  fractionOneDenominator : integer;
-  fractionTwoNumerator : integer;
-  fractionTwoDenominator: integer;
+  oneNumerator : integer;
+  oneDenominator : integer;
+  twoNumerator : integer;
+  twoDenominator: integer;
   
-  fractionOperator : string;
+  fractionOperator : string; // 'operator' is the reserved word
 Begin
   // Data input
   Write('Please enter the first fraction numerator = ');
-  Readln(fractionOneNumerator);
+  Readln(oneNumerator);
   
   Write('Please enter the first fraction denominator = ');
-  Readln(fractionOneDenominator);
+  Readln(oneDenominator);
   
   Write('Please enter the second fraction numerator = ');
-  Readln(fractionTwoNumerator);
+  Readln(twoNumerator);
   
   Write('Please enter the second fraction denominator = ');
-  Readln(fractionTwoDenominator);
+  Readln(twoDenominator);
   
   Write('Please enter operator (+,-,*,/)');
   Readln(fractionOperator);
@@ -27,13 +27,13 @@ Begin
   Writeln;
   
   If fractionOperator = '+' then
-    writeln('Sum of fractions s = ', (fractionOneNumerator*fractionTwoDenominator+fractionOneDenominator*fractionTwoNumerator),'/',(fractionOneDenominator*fractionTwoDenominator))
+    writeln('Sum of fractions s = ', (oneNumerator*twoDenominator+oneDenominator*twoNumerator),'/',(oneDenominator*twoDenominator))
   else 
     if fractionOperator = '-' then
-      writeln('Sum of fractions s = ', (fractionOneNumerator*fractionTwoDenominator-fractionOneDenominator*fractionTwoNumerator),'/',(fractionOneDenominator*fractionTwoDenominator))
+      writeln('Sum of fractions s = ', (oneNumerator*twoDenominator-oneDenominator*twoNumerator),'/',(oneDenominator*twoDenominator))
     else
       if fractionOperator = '*'  then
-        writeln ('Sum of fractions s = ', (fractionOneNumerator*fractionTwoNumerator),'/',(fractionOneDenominator*fractionTwoDenominator))
+        writeln ('Sum of fractions s = ', (oneNumerator*twoNumerator),'/',(oneDenominator*twoDenominator))
       else
-        writeln ('Sum of fractions s = ', (fractionOneNumerator*fractionTwoDenominator),'/',(fractionOneDenominator*fractionTwoDenominator))
+        writeln ('Sum of fractions s = ', (oneNumerator*twoDenominator),'/',(oneDenominator*twoDenominator))
 end.
