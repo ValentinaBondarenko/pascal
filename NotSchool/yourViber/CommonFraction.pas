@@ -6,7 +6,6 @@ var
   fractionTwoDenominator: integer;
   
   fractionOperator : string;
-  s: real;
 Begin
   // Data input
   Write('Please enter the first fraction numerator = ');
@@ -24,10 +23,7 @@ Begin
   Write('Please enter operator (+,-,*,/)');
   Readln(fractionOperator);
   
-  // Calculation
-  S:=(fractionOneNumerator*fractionTwoDenominator+fractionOneDenominator*fractionTwoNumerator)/(fractionOneDenominator*fractionTwoDenominator);
-  
-  // Output
+  // Calculation and immediate output
   Writeln;
   writeln('Sum of fractions s = ', (fractionOneNumerator*fractionTwoDenominator+fractionOneDenominator*fractionTwoNumerator),'/',(fractionOneDenominator*fractionTwoDenominator));
 end.
