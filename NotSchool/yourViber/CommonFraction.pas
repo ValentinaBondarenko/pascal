@@ -15,5 +15,4 @@ Readln(d);
 S:=(a*d+b*c)/(b*d);
 Writeln;
 writeln('Сумма дробей s = ', (a*d+b*c),' /',(b*d));
-readln;
 end.
