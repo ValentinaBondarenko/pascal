@@ -1,4 +1,4 @@
-﻿Program DROB;
+﻿Program CommonFraction;
 uses crt;
 var
 a, b, c, d: integer;
@@ -18,4 +18,3 @@ Writeln;
 writeln('Сумма дробей s = ', (a*d+b*c),' /',(b*d));
 readln;
 end.
-
