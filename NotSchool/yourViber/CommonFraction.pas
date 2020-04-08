@@ -58,9 +58,12 @@ Begin
       
   
   // Socraschenie
-     if (resultNumerator mod 2 = 0) then  abbreviatedNumerator:=resultNumerator div 2;
-     if (resultDenominator mod 2= 0) then  abbreviatedDenominator:=resultDenominator div 2;   
-     
+     if (resultNumerator mod 2 = 0) then   
+        abbreviatedNumerator:=resultNumerator div 2;
+        writeln (abbreviatedNumerator);
+     if (resultDenominator mod 2= 0) then  
+         abbreviatedDenominator:=resultDenominator div 2;
+         writeln (abbreviatedDenominator);
   // Determinging of the whole (celyi) part   
       
   //output
