@@ -58,6 +58,12 @@ Begin
       
   
   // Socraschenie
+   if (resultNumerator mod 5 = 0) then   
+        abbreviatedNumerator:=resultNumerator div 5;
+        writeln (abbreviatedNumerator);
+     if (resultDenominator mod 5= 0) then  
+         abbreviatedDenominator:=resultDenominator div 5;
+         writeln (abbreviatedDenominator);
   
   if (resultNumerator mod 4 = 0) then   
         abbreviatedNumerator:=resultNumerator div 4;
