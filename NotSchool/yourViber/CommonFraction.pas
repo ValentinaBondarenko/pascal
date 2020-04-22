@@ -1,5 +1,6 @@
 ﻿Program CommonFraction;
 var
+  ifDebug : boolean;
   i : integer;
   arraySize : integer;
 
@@ -22,7 +23,19 @@ var
   );
   
 Begin
+  ifDebug := true;
+
   // Data input
+  if (ifDebug = true ) then
+    begin
+      oneNumerator := 12;
+      oneDenominator := 24;
+      twoNumerator := 15;
+      twoDenominator := 30;
+      fractionOperator := '+';
+    end
+  else 
+    begin
       Write('Please enter the first fraction numerator = ');
       Readln(oneNumerator);
       
@@ -37,6 +50,8 @@ Begin
       
       Write('Please enter operator (+,-,*,/)');
       Readln(fractionOperator);
+    end;
+  
   
   // Calculation
     
@@ -72,6 +87,9 @@ Begin
   
   // Data from https://oeis.org/A000040
  
+  if (ifDebug = true) then
+    arraySize := 4
+  else 
     arraySize := 58;
   
    for i:=1 to arraySize do
