@@ -94,7 +94,7 @@ Begin
   
    for i:=1 to arraySize do
    begin
-      if (resultNumerator mod thePrimeNumbers[i] = 0) and (resultDenominator mod thePrimeNumbers[i] = 0) then
+      while (resultNumerator mod thePrimeNumbers[i] = 0) and (resultDenominator mod thePrimeNumbers[i] = 0) do
         begin
             resultNumerator:= (resultNumerator) div (thePrimeNumbers[i]);
             resultDenominator:= (resultDenominator) div (thePrimeNumbers[i]);
