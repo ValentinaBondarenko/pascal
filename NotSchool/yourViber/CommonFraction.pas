@@ -23,7 +23,7 @@ var
   );
   
 Begin
-  debugMode := true;
+  debugMode := false;
 
   // Data input
   if (debugMode = true ) then
@@ -36,19 +36,19 @@ Begin
     end
   else 
     begin
-      Write('Please enter the first fraction numerator = ');
+      Writeln('Please enter the first fraction numerator = ');
       Readln(oneNumerator);
       
-      Write('Please enter the first fraction denominator = ');
+      Writeln('Please enter the first fraction denominator = ');
       Readln(oneDenominator);
       
-      Write('Please enter the second fraction numerator = ');
+      Writeln('Please enter the second fraction numerator = ');
       Readln(twoNumerator);
       
-      Write('Please enter the second fraction denominator = ');
+      Writeln('Please enter the second fraction denominator = ');
       Readln(twoDenominator);
       
-      Write('Please enter operator (+,-,*,/)');
+      Writeln('Please enter operator (+,-,*,/)');
       Readln(fractionOperator);
     end;
   
