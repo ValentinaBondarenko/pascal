@@ -4,6 +4,10 @@ var
   i : integer;
   arraySize : integer;
 
+
+  inputString: string;
+  possibleInputError : integer; 
+
   oneNumerator : integer;
   oneDenominator : integer;
   twoNumerator : integer;
@@ -37,7 +41,9 @@ Begin
   else 
     begin
       Writeln('Please enter the first fraction numerator = ');
-      Readln(oneNumerator);
+      Readln(inputString);
+      Val(inputString, oneNumerator, possibleInputError);
+    
       
       Writeln('Please enter the first fraction denominator = ');
       Readln(oneDenominator);
