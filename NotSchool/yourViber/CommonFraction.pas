@@ -43,6 +43,12 @@ Begin
       Writeln('Please enter the first fraction numerator = ');
       Readln(inputString);
       Val(inputString, oneNumerator, possibleInputError);
+      
+      if  (possibleInputError <> 0) then
+        begin
+          Writeln('Please enter integer number, because you''ve entered the string ' + inputString);
+          exit;
+        end;         
     
       
       Writeln('Please enter the first fraction denominator = ');
