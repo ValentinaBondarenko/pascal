@@ -40,27 +40,39 @@ Begin
     end
   else 
     begin
+      // First Numerator
       Writeln('Please enter the first fraction numerator = ');
       Readln(inputString);
       Val(inputString, oneNumerator, possibleInputError);
-      
       if  (possibleInputError <> 0) then
         begin
           Writeln('Please enter integer number, because you''ve entered the string ' + inputString);
           exit;
         end;         
-    
       
+      // First Denominator
       Writeln('Please enter the first fraction denominator = ');
-      Readln(oneDenominator);
+      Readln(inputString);
+      Val(inputString, oneDenominator, possibleInputError);
       
+      if  (possibleInputError <> 0) then
+        begin
+          Writeln('Please enter integer number, because you''ve entered the string ' + inputString);
+          exit;
+        end;       
+      
+      
+      // Second Numerator
       Writeln('Please enter the second fraction numerator = ');
       Readln(twoNumerator);
       
+      
+      // Second Denominator
       Writeln('Please enter the second fraction denominator = ');
       Readln(twoDenominator);
       
       Writeln('Please enter operator (+,-,*,/)');
+      
       Readln(fractionOperator);
     end;
   
