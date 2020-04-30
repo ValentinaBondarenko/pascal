@@ -1,6 +1,6 @@
 ﻿Program CommonFraction;
 var
-  ifDebug : boolean;
+  debugMode : boolean;
   i : integer;
   arraySize : integer;
 
@@ -23,10 +23,10 @@ var
   );
   
 Begin
-  ifDebug := true;
+  debugMode := true;
 
   // Data input
-  if (ifDebug = true ) then
+  if (debugMode = true ) then
     begin
       oneNumerator := 12;
       oneDenominator := 24;
@@ -87,7 +87,7 @@ Begin
   
   // Data from https://oeis.org/A000040
  
-  if (ifDebug = true) then
+  if (debugMode = true) then
     arraySize := 4
   else 
     arraySize := 58;
