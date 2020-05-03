@@ -7,6 +7,10 @@ var
 
   inputString: string;
   possibleInputError : integer; 
+  
+  //for fractionoperator
+  inputOperator: string;
+  inputOperatorError: integer;
 
   oneNumerator : integer;
   oneDenominator : integer;
