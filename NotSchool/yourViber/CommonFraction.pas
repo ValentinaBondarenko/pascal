@@ -69,6 +69,13 @@ Begin
       // Second Numerator
       Writeln('Please enter the second fraction numerator = ');
       Readln(twoNumerator);
+      Val(inputString, twoNumerator, possibleInputError);
+      
+      if  (possibleInputError <> 0) then
+        begin
+          Writeln('Please enter integer number, because you''ve entered the string ' + inputString);
+          exit;
+        end;       
       
       
       // Second Denominator
