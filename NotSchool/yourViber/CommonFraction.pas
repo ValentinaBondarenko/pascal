@@ -81,6 +81,14 @@ Begin
       // Second Denominator
       Writeln('Please enter the second fraction denominator = ');
       Readln(twoDenominator);
+      Val(inputString, twoDenominator, possibleInputError);
+      
+      if  (possibleInputError <> 0) then
+        begin
+          Writeln('Please enter integer number, because you''ve entered the string ' + inputString);
+          exit;
+        end;     
+      
       
       Writeln('Please enter operator (+,-,*,/)');
       
