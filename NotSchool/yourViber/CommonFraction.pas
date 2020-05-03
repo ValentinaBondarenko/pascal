@@ -91,6 +91,15 @@ Begin
       
       
       Writeln('Please enter operator (+,-,*,/)');
+      Readln(fractionOperator);
+      //Val(inputOperator, fractionOperator,inputOperatorError);
+      
+      if (fractionOperator <> '+') or (fractionOperator <> '-') and (fractionOperator <> '*') and (fractionOperator <> '/') then
+      else
+        begin
+          Writeln('Please enter (+,-,*,/), because you''ve entered the string ' + inputOperator);
+          exit;
+        end;     
       
       Readln(fractionOperator);
     end;
