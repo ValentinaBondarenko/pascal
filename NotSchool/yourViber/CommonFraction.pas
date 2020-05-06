@@ -2,7 +2,6 @@
 var
   debugMode : boolean;
   i : integer;
-  k : integer;
   arraySize : integer;
 
   //for numerators and denominators
@@ -16,6 +15,7 @@ var
   
   resultNumerator : integer;
   resultDenominator : integer;
+  resultWholePart : integer;
   resultString : string;
   
   fractionOperator : string; // 'operator' is the reserved word
@@ -149,20 +149,31 @@ Begin
         end;           
    end;
      
-  // Determinging of the whole (celyi) part   
-  { for k:=1 to 100 do
-      k:=k+1;
-   begin
-      while resultNumerator div resultDenominator <> 0 do
-        begin
-            resultNumerator:= (resultNumerator) div (thePrimeNumbers[i]);?
-            resultDenominator:= (resultDenominator) div (thePrimeNumbers[i]);?
-            k:= k + resultNumerator + ' /  '+ resultDenominator
-        end;       
-   end; }     
+  // Determinging of the whole (celyi) part
+  // resultNumerator <> resultDenominator,
+  // because they will be divided to each other by code above
+  if resultNumerator  < resultDenominator then
+    begin
+      resultWholePart := 0; // Or we can simply omit this 
+    end
+  else 
+    begin
+      resultWholePart := resultNumerator div resultDenominator;
+      resultNumerator := resultNumerator mod resultDenominator;
+    end;
+   
   //output
   Writeln;
   
-  resultString := resultString +  ' of fractions = ' + resultNumerator + '/' + resultDenominator;
+  resultString := resultString +  ' of fractions = ';
+  
+  if resultWholePart > 0 then
+  begin
+    resultString := resultString + resultWholePart + ' '
+  end;
+  
+  
+  resultString := resultString + resultNumerator + '/' + resultDenominator;
+
   writeln(resultString);
 end.
