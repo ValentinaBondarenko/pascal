@@ -2,6 +2,7 @@
 var
   debugMode : boolean;
   i : integer;
+  k : integer;
   arraySize : integer;
 
   //for numerators and denominators
@@ -149,7 +150,16 @@ Begin
    end;
      
   // Determinging of the whole (celyi) part   
-      
+  { for k:=1 to 100 do
+      k:=k+1;
+   begin
+      while resultNumerator div resultDenominator <> 0 do
+        begin
+            resultNumerator:= (resultNumerator) div (thePrimeNumbers[i]);?
+            resultDenominator:= (resultDenominator) div (thePrimeNumbers[i]);?
+            k:= k + resultNumerator + ' /  '+ resultDenominator
+        end;       
+   end; }     
   //output
   Writeln;
   
