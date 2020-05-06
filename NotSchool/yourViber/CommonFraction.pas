@@ -4,14 +4,10 @@ var
   i : integer;
   arraySize : integer;
 
-
+  //for numerators and denominators
   inputString: string;
   possibleInputError : integer; 
   
-  //for fractionoperator
-  inputOperator: string;
-  inputOperatorError: integer;
-
   oneNumerator : integer;
   oneDenominator : integer;
   twoNumerator : integer;
@@ -92,16 +88,15 @@ Begin
       
       Writeln('Please enter operator (+,-,*,/)');
       Readln(fractionOperator);
-      //Val(inputOperator, fractionOperator,inputOperatorError);
       
-      if (fractionOperator <> '+') or (fractionOperator <> '-') and (fractionOperator <> '*') and (fractionOperator <> '/') then
+      if (fractionOperator = '+') or (fractionOperator = '-') or (fractionOperator = '*') or (fractionOperator = '/') then
+        // this is ok
       else
         begin
-          Writeln('Please enter (+,-,*,/), because you''ve entered the string ' + inputOperator);
+          Writeln('Please enter (+,-,*,/), because you''ve entered the string ' + fractionOperator);
           exit;
         end;     
       
-      Readln(fractionOperator);
     end;
   
   
