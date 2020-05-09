@@ -50,18 +50,26 @@ Begin
           Writeln('Please enter integer number, because you''ve entered the string ' + inputString);
           exit;
         end;         
+     
       
       // First Denominator
       Writeln('Please enter the first fraction denominator = ');
       Readln(inputString);
       Val(inputString, oneDenominator, possibleInputError);
       
-      if  (possibleInputError <> 0) then
+      if  (possibleInputError<> 0) then
         begin
           Writeln('Please enter integer number, because you''ve entered the string ' + inputString);
           exit;
-        end;       
-      
+        end;  
+       
+     
+        
+       if (inputString = '0') then
+      begin
+          Writeln('denominator cannot be zero, please enter another number instead of ' + inputString);
+          exit;
+        end;     
       
       // Second Numerator
       Writeln('Please enter the second fraction numerator = ');
