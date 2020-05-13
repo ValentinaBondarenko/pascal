@@ -8,6 +8,9 @@ var
   inputString: string;
   possibleInputError : integer; 
   
+  oneWholePart : integer;
+  twoWholePart : integer;
+  
   oneNumerator : integer;
   oneDenominator : integer;
   twoNumerator : integer;
