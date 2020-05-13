@@ -185,7 +185,14 @@ Begin
     resultString := resultString + resultWholePart + ' '
   end;
   
+  //если числитель равен нулю, то выводить только целую часть, надо проверить
   
+  if resultNumerator = 0 then 
+   begin
+    resultString :=   'resultWholePart' ;  
+    writeln(resultWholePart  );
+  end
+  else
   resultString := resultString + resultNumerator + '/' + resultDenominator;
 
   writeln(resultString);
