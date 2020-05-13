@@ -92,8 +92,13 @@ Begin
         begin
           Writeln('Please enter integer number, because you''ve entered the string ' + inputString);
           exit;
+        end;  
+        
+       if (inputString = '0') then
+      begin
+          Writeln('denominator cannot be zero, please enter another number' + inputString);
+          exit;
         end;     
-      
       
       Writeln('Please enter operator (+,-,*,/)');
       Readln(fractionOperator);
