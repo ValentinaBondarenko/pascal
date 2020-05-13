@@ -40,6 +40,18 @@ Begin
       fractionOperator := '+';
     end
   else 
+  //oneWholePart
+   Writeln('Please enter the whole part of the first fraction  = ');
+      Readln(inputString);
+      Val(inputString, oneNumerator, possibleInputError);
+      if  (possibleInputError <> 0) then
+        begin
+          Writeln('Please enter integer number, because you''ve entered the string ' + inputString);
+          exit;
+        end;      
+  
+  
+  
     begin
       // First Numerator
       Writeln('Please enter the first fraction numerator = ');
@@ -49,8 +61,8 @@ Begin
         begin
           Writeln('Please enter integer number, because you''ve entered the string ' + inputString);
           exit;
-        end;         
-     
+        end; 
+    
       
       // First Denominator
       Writeln('Please enter the first fraction denominator = ');
@@ -70,7 +82,15 @@ Begin
           Writeln('denominator cannot be zero, please enter another number instead of ' + inputString);
           exit;
         end;     
-      
+       //twoWholePart
+       Writeln('Please enter the whole part of the second fraction  = ');
+      Readln(inputString);
+      Val(inputString, oneNumerator, possibleInputError);
+      if  (possibleInputError <> 0) then
+        begin
+          Writeln('Please enter integer number, because you''ve entered the string ' + inputString);
+          exit;
+        end;      
       // Second Numerator
       Writeln('Please enter the second fraction numerator = ');
       Readln(twoNumerator);
@@ -112,9 +132,11 @@ Begin
         end;     
       
     end;
+    
+  //calculations to change whole parts to ordinary fractions
+    
   
-  
-  // Calculation
+  // Calculation of fractions
     
   If fractionOperator = '+' then
     begin
