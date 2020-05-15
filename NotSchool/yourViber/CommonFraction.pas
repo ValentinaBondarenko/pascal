@@ -44,7 +44,6 @@ Begin
     end
   else 
   //oneWholePart
-  //?
    Writeln('Please enter the whole part of the first fraction  = ');
       Readln(inputString);
       Val(inputString, oneNumerator, possibleInputError);
@@ -59,7 +58,7 @@ Begin
     begin
       // First Numerator
       Writeln('Please enter the first fraction numerator = ');
-      Readln(oneNumerator);
+      Readln(inputString);
       Val(inputString, oneNumerator, possibleInputError);
       if  (possibleInputError <> 0) then
         begin
@@ -70,7 +69,7 @@ Begin
       
       // First Denominator
       Writeln('Please enter the first fraction denominator = ');
-      Readln(oneDenominator);
+      Readln(inputString);
       Val(inputString, oneDenominator, possibleInputError);
       
       if  (possibleInputError<> 0) then
@@ -87,9 +86,8 @@ Begin
           exit;
         end;     
        //twoWholePart
-       //?
        Writeln('Please enter the whole part of the second fraction  = ');
-      Readln(twoWholePart);
+      Readln(inputString);
       Val(inputString, oneNumerator, possibleInputError);
       if  (possibleInputError <> 0) then
         begin
@@ -139,19 +137,8 @@ Begin
     end;
     
   //calculations to change whole parts to ordinary fractions
-  //?
-    if (oneWholePart >= oneDenominator) then
-        oneNumerator:= oneNumerator +(oneWholePart*oneNumerator)
-      
-    else 
-      oneNumerator:= oneNumerator;
-      
-      if (twoWholePart >= twoDenominator) then
-         twoNumerator:= twoNumerator +(twoWholePart*twoNumerator)
-      
-    else 
-      twoNumerator:= twoNumerator;
-      
+    
+  
   // Calculation of fractions
     
   If fractionOperator = '+' then
@@ -224,7 +211,7 @@ Begin
   end;
   
   //если числитель равен нулю, то выводить только целую часть, надо проверить
-  //?
+  
   if resultNumerator = 0 then 
    begin
     resultString :=   'resultWholePart' ;  
