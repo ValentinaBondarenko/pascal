@@ -46,7 +46,7 @@ Begin
   //oneWholePart
    Writeln('Please enter the whole part of the first fraction  = ');
       Readln(inputString);
-      Val(inputString, oneNumerator, possibleInputError);
+      Val(inputString, oneWholePart, possibleInputError);
       if  (possibleInputError <> 0) then
         begin
           Writeln('Please enter integer number, because you''ve entered the string ' + inputString);
@@ -80,15 +80,17 @@ Begin
        
      
         
-       if (inputString = '0') then
+       if (oneDenominator = 0) then
       begin
           Writeln('denominator cannot be zero, please enter another number instead of ' + inputString);
           exit;
-        end;     
+        end;  
+        
        //twoWholePart
+     
        Writeln('Please enter the whole part of the second fraction  = ');
       Readln(inputString);
-      Val(inputString, oneNumerator, possibleInputError);
+      Val(inputString,twoWholePart, possibleInputError);
       if  (possibleInputError <> 0) then
         begin
           Writeln('Please enter integer number, because you''ve entered the string ' + inputString);
@@ -96,7 +98,7 @@ Begin
         end;      
       // Second Numerator
       Writeln('Please enter the second fraction numerator = ');
-      Readln(twoNumerator);
+      Readln(inputString);
       Val(inputString, twoNumerator, possibleInputError);
       
       if  (possibleInputError <> 0) then
@@ -108,7 +110,7 @@ Begin
       
       // Second Denominator
       Writeln('Please enter the second fraction denominator = ');
-      Readln(twoDenominator);
+      Readln(inputString);
       Val(inputString, twoDenominator, possibleInputError);
       
       if  (possibleInputError <> 0) then
@@ -117,7 +119,7 @@ Begin
           exit;
         end;  
         
-       if (inputString = '0') then
+       if (twoDenominator = 0) then
       begin
           Writeln('denominator cannot be zero, please enter another number' + inputString);
           exit;
@@ -137,8 +139,13 @@ Begin
     end;
     
   //calculations to change whole parts to ordinary fractions
-    
-  
+  //?
+   // if (oneWholePart >= 0) then
+   //     Writeln(oneWholePart);
+    oneNumerator:= oneNumerator +(oneWholePart*oneDenominator);
+    twoNumerator:= twoNumerator +(twoWholePart*twoDenominator);
+
+      
   // Calculation of fractions
     
   If fractionOperator = '+' then
@@ -162,6 +169,9 @@ Begin
           resultString := 'Multiplication';  
         end
       else
+      
+     
+       if fractionOperator = '/' then 
         begin
           resultNumerator := oneNumerator*twoDenominator;
           resultDenominator := oneDenominator*twoDenominator;
@@ -211,14 +221,19 @@ Begin
   end;
   
   //если числитель равен нулю, то выводить только целую часть, надо проверить
-  
+  //?
   if resultNumerator = 0 then 
+  // do nothing
+  {
    begin
     resultString :=   'resultWholePart' ;  
     writeln(resultWholePart  );
   end
-  else
-  resultString := resultString + resultNumerator + '/' + resultDenominator;
+  }
+  else 
+    begin 
+      resultString := resultString + resultNumerator + '/' + resultDenominator;
+    end;
 
   writeln(resultString);
 end.
